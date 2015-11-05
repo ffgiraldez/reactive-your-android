@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="susurro.grito.tefcon.eventthrottling">
+    package="es.ffgiraldez.reactiveyourandroid.eventthrottling">
 
     <application
         android:allowBackup="true"

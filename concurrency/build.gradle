@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "susurro.grito.tefcon.concurrency"
+        applicationId "es.ffgiraldez.reactiveyourandroid.concurrency"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
@@ -18,10 +18,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     compile parent.ext.androidAppcompat
     compile parent.ext.libRx
     compile parent.ext.libRxAndroid
+    compile parent.ext.libRxAndroidBinding
 }

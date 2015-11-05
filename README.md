@@ -1,2 +1,2 @@
-# rx-android-tefcon-2015
-Rx demos for the 2015 TefCon
+# Reactive your Android	
+Rx demos for the GDG AndaTour 2015

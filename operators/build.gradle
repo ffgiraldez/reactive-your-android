@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "susurro.grito.tefcon.operators"
+        applicationId "es.ffgiraldez.reactiveyourandroid.operators"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
@@ -28,5 +28,6 @@ dependencies {
     compile parent.ext.androidAppcompat
     compile parent.ext.libRx
     compile parent.ext.libRxAndroid
+    compile parent.ext.libRxAndroidBinding
     compile parent.ext.libRenderer
 }
