@@ -7,11 +7,11 @@
     >
 
     <FrameLayout
-        android:background="#556B2F"
+        android:background="#ffff3a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         >
         <include layout="@layout/view_text_telephony" />
     </FrameLayout>

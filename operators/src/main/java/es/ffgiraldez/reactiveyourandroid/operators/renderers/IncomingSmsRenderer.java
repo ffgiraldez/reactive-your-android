@@ -9,7 +9,7 @@ import es.ffgiraldez.reactiveyourandroid.operators.R;
 /**
  * @author Fernando Franco Giráldez
  */
-public class IncomingSmsRenderer extends TelephonyEventRenderer {
+public class IncomingSmsRenderer extends SmsRenderer {
 
     @Override
     protected View inflate(LayoutInflater inflater, ViewGroup parent) {

@@ -9,9 +9,10 @@ import es.ffgiraldez.reactiveyourandroid.operators.R;
 /**
  * @author Fernando Franco Giráldez
  */
-public class OutgoingSmsRenderer extends SmsRenderer {
+public class IncomingCallRenderer extends CallRenderer {
+
     @Override
     protected View inflate(LayoutInflater inflater, ViewGroup parent) {
-        return inflater.inflate(R.layout.view_outcoming_sms, parent, false);
+        return inflater.inflate(R.layout.view_incoming_call, parent, false);
     }
 }

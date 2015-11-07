@@ -14,6 +14,6 @@
         android:layout_alignParentRight="true"
         >
 
-        <include layout="@layout/view_text_sms" />
+        <include layout="@layout/view_text_telephony" />
     </FrameLayout>
 </RelativeLayout>

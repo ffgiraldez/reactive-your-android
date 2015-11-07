@@ -6,13 +6,13 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-import es.ffgiraldez.reactiveyourandroid.operators.Sms;
+import es.ffgiraldez.reactiveyourandroid.operators.TelephonyEvent;
 
 /**
  * @author Fernando Franco Giráldez
  */
-public class TelephonyEventCollection implements AdapteeCollection<Sms> {
-    private final List<Sms> list = new LinkedList<>();
+public class TelephonyEventCollection implements AdapteeCollection<TelephonyEvent> {
+    private final List<TelephonyEvent> list = new LinkedList<>();
 
     @Override
     public int size() {
@@ -20,27 +20,27 @@ public class TelephonyEventCollection implements AdapteeCollection<Sms> {
     }
 
     @Override
-    public Sms get(int index) {
+    public TelephonyEvent get(int index) {
         return list.get(index);
     }
 
     @Override
-    public void add(Sms element) {
+    public void add(TelephonyEvent element) {
         list.add(element);
     }
 
     @Override
-    public void remove(Sms element) {
+    public void remove(TelephonyEvent element) {
         list.remove(element);
     }
 
     @Override
-    public void addAll(Collection<Sms> elements) {
+    public void addAll(Collection<TelephonyEvent> elements) {
         list.addAll(elements);
     }
 
     @Override
-    public void removeAll(Collection<Sms> elements) {
+    public void removeAll(Collection<TelephonyEvent> elements) {
         list.removeAll(elements);
     }
 

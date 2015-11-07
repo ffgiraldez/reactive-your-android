@@ -16,10 +16,15 @@ import es.ffgiraldez.reactiveyourandroid.operators.renderers.TelephonyEventRende
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 
+/**
+ * Task to execute during demo
+ *  - Filter TelephonyEvent to show only from a specific partner
+ *  - Filter to show only Sms
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ListView list;
-    private RendererAdapter<Sms> adapter;
+    private RendererAdapter<TelephonyEvent> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 .mergeWith(realTimeSequence1)
                 .mergeWith(realTimeSequence2)
                 .mergeWith(realTimeSequence3)
-                .ofType(Sms.class)
-                .filter(sms -> sms.getPartner().equalsIgnoreCase("Eric")) //Change to Eric for demo
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::addSms);
     }
@@ -107,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    private void addSms(Sms sms) {
-        adapter.add(sms);
+    private void addSms(TelephonyEvent telephonyEvent) {
+        adapter.add(telephonyEvent);
         adapter.notifyDataSetChanged();
     }
 
