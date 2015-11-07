@@ -1,4 +1,4 @@
-package es.ffgiraldez.reactiveyourandroid;
+package es.ffgiraldez.reactiveyourandroid.simple;
 
 import java.util.Scanner;
 

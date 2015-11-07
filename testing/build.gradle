@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+
+dependencies {
+    compile parent.ext.libRx
+
+    testCompile parent.ext.libJunit
+    testCompile parent.ext.libMockito
+    testCompile parent.ext.libAssertj
+}

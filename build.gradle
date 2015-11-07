@@ -17,7 +17,11 @@ allprojects {
         libRxAndroid = 'io.reactivex:rxandroid:1.0.1'
         libRxAndroidBinding = 'com.jakewharton.rxbinding:rxbinding:0.3.0'
         libOtto = 'com.squareup:otto:1.3.7'
-        libRenderer =  'com.github.pedrovgs:renderers:1.4'
+        libRenderer = 'com.github.pedrovgs:renderers:1.4'
+
+        libJunit = 'junit:junit:4.10'
+        libMockito = 'org.mockito:mockito-core:1.10.19'
+        libAssertj = 'org.assertj:assertj-core:1.6.1'
     }
     repositories {
         jcenter()
