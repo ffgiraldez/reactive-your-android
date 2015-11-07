@@ -28,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
             public void call(Subscriber<? super String> subscriber) {
                 try {
                     Log.d(TAG, String.format("Invoked on ThreadId %d", Thread.currentThread().getId()));
+                    Log.d(TAG, String.format("Sending 1 on ThreadId %d", Thread.currentThread().getId()));
                     subscriber.onNext("1");
                     Thread.sleep(SLEEP_TIME);
+                    Log.d(TAG, String.format("Sending 2 on ThreadId %d", Thread.currentThread().getId()));
                     subscriber.onNext("2");
                     Thread.sleep(SLEEP_TIME);
+                    Log.d(TAG, String.format("Sending 3 on ThreadId %d", Thread.currentThread().getId()));
                     subscriber.onNext("3");
                     Thread.sleep(SLEEP_TIME);
                     Log.d(TAG, String.format("Finished on ThreadId %d", Thread.currentThread().getId()));
