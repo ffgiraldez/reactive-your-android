@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         );
         subscription.add(
                 textChangeObservable
-                        .throttleLast(300, TimeUnit.MILLISECONDS)
+                        .throttleLast(500, TimeUnit.MILLISECONDS)
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(editTextThrottled::setText)
         );

@@ -8,9 +8,12 @@ import android.widget.TextView;
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
+/**
+ * During demo:
+ *     - explain subscribeOn() and see the problem changing the UI
+ *     - apply observeOn() and check ThreadId values
+ */
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Concurrency";
     public static final int SLEEP_TIME = 2000;
@@ -46,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         subscription = observable
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         value -> addText(
                                 String.format("Received %s on ThreadId: %d", value, Thread.currentThread().getId())

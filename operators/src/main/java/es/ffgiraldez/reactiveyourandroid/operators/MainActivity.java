@@ -18,8 +18,8 @@ import rx.android.schedulers.AndroidSchedulers;
 
 /**
  * Task to execute during demo
- *  - Filter TelephonyEvent to show only from a specific partner
- *  - Filter to show only Sms
+ * - Filter TelephonyEvent to show only from a specific partner
+ * - Filter to show only Sms
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 );
 
         Observable<TelephonyEvent> realTimeSequence2 = Observable
-                .interval(3, TimeUnit.SECONDS)
+                .interval(4, TimeUnit.SECONDS)
                 .map(i ->
                                 new Sms(
                                         new Date(),
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 );
 
         Observable<TelephonyEvent> realTimeSequence3 = Observable
-                .interval(3, TimeUnit.SECONDS)
+                .interval(5, TimeUnit.SECONDS)
                 .map(i ->
                                 new Sms(
                                         new Date(),
